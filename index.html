@@ -12,27 +12,40 @@
 
 	<!-- Add custom CSS here -->
 	<link href="./myPage_files/custom.css" rel="stylesheet">
-
+	<script src="bundle.js"></script>
 
 </head>
 
 <body>
 	<div id="fb-root"></div>
-	<script>(function (d, s, id) {
+	<script>
+	(function (d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
 			js = d.createElement(s); js.id = id;
+
+			var words = window.translateEmojiGlobal('i love you');
+			 console.log(words);
 			js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
 			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
+		}(document, 'script', 'facebook-jssdk'));
+		
+
+			function myFunction(val) {
+				// alert("The input value has changed. The new value is: " + val);
+				var converted = window.translateEmojiGlobal(val);
+				console.log(converted);
+				var elem = document.getElementById("emoji");
+				elem.innerHTML = "Your challenge sentence :	" + converted;
+			}
+
+		</script>
 
 
 	<!-- Header -->
 	<nav class="navbar navbar-default navbar-fixed-top header">
 		<div class="container">
-			<a class="navbar-brand logo">
-				Travel and Win
-			</a>
+			<img width="300px" height="100px" src="myPage_files/logo.png">
 		</div>
 		</div>
 	</nav>
@@ -49,32 +62,36 @@
 						<h4>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</h4>
 						<hr class="top-divider">
 						<br>
-						<h5>Travel to designated locations and complete challenges to win prizes</h5>
+						<h4>Try to understand emoji challenge sentence.</h4>
+						<h4>Go to designated locations and complete challenge to win prizes</h4>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="download-form">
-						<div class="row">
+						<!-- <div class="row">
 							<input class="form-control" type="email" placeholder="My Name">
-						</div>
+						</div> -->
 						<div class="row">
 							<input class="form-control" type="email" placeholder="Place">
 						</div>
 						<div class="row">
-							<textarea class="form-control" placeholder="Your challenge"></textarea>
-						</div>
+								<div class="emoji" id="emoji">Your emoji sentence</div>
+							</div>
 						<div class="row">
+							<textarea class="form-control" onkeyup="myFunction(this.value)" placeholder="Your challenge"></textarea>
+						</div>
+						<!-- <div class="row">
 							<button type="submit" class="btn btn-default d-btn">Create Challenge</button>
-						</div>
-						<div class="row">
+						</div> -->
+						<!-- <div class="row">
 							<h2>Share your challenge</h2>
 						</div>
 						<div class="row">
 							<small>http://127.0.0.1:8080/myPage.html/id5555</small>
-						</div>
+						</div> -->
 						<div class="row">
-							<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"
-							 data-size="large" data-mobile-iframe="false"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+							<div class="fb-share-button" data-href="https://www.google.lt/maps/@54.9009512,23.9449545,3a,90y,348.13h,82.77t/data=!3m6!1e1!3m4!1sE2tT-fSinGwgwdT1wQvZPg!2e0!7i13312!8i6656"
+							 data-layout="button" data-size="large" data-mobile-iframe="false"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
 								 class="fb-xfbml-parse-ignore">Bendrinti</a></div>
 						</div>
 					</div>
@@ -89,67 +106,98 @@
 				<h1 class="page-header">Challenges</h1>
 			</div>
 			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/1(2).jpg" alt="">
-				<h3>John Smith</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
-			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/2(2).jpg" alt="">
+				<img width="400px" height="200px" class="img-responsive" src="mock_images/1.jpg" alt="">
 				<h3>Antony Doe</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
+				<p>♂️💄🎤⛄🎸♂️👠🍕</p>
 			</div>
 			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/3(1).jpg" alt="">
+				<img  width="400px"height="200px" class="img-responsive" src="mock_images/2.jpg" alt="">
 				<h3>Maria Joe</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
+				<p>♂️💄🎤💃🤳⛷🚴‍🍕</p>
 			</div>
 			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/1(2).jpg" alt="">
-				<h3>John Smith</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
-			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/2(2).jpg" alt="">
-				<h3>Antony Doe</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
-			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/3(1).jpg" alt="">
+				<img width="400px" height="200px" class="img-responsive" src="mock_images/5.jpg" alt="">
 				<h3>Maria Joe</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
-			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/1(2).jpg" alt="">
-				<h3>John Smith</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
-			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/2(2).jpg" alt="">
-				<h3>Antony Doe</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
-			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/3(1).jpg" alt="">
-				<h3>Maria Joe</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
-			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/1(2).jpg" alt="">
-				<h3>John Smith</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
-			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/2(2).jpg" alt="">
-				<h3>Antony Doe</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
-			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive" src="./myPage_files/3(1).jpg" alt="">
-				<h3>Maria Joe</h3>
-				<p>♂️💄🎤💃🤳⛷🚴‍🤸‍♂️🤹‍⛄🎸♂️👠🍕</p>
+				<p>♂️💄♂️🤹‍⛄🍕</p>
 			</div>
 		</div>
 	</div>
+
+
+	<div class="container team">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Challenge places</h1>
+			</div>
+			<div class="col-sm-4">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11989.07557850619!2d23.906357562948504!3d54.89269090176391!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e72271d0b1c3e1%3A0xff421580fc4b8b14!2s%C5%BDalgirio+arena!5e0!3m2!1slt!2slt!4v1538855806693"
+				width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+				<h3>Maria Joe</h3>
+				<p>♂️♂️👠🍕</p>
+			</div>
+			<div class="col-sm-4">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4588.537295275218!2d23.908771810309222!3d54.8982068482708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7227535a0837d%3A0x8ec1fa66fdde3e8c!2sNacionalinis+M.+K.+%C4%8Ciurlionio+dail%C4%97s+muziejus!5e0!3m2!1slt!2slt!4v1538855830407"
+				width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+				<h3>Maria Joe</h3>
+				<p>♂️💄🚴‍🤸‍🍕</p>
+			</div>
+			<div class="col-sm-4">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2747.9337677904946!2d23.916958440024302!3d54.90110296881403!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e719d79e8c4b9b%3A0x147b5a45ca1a3fab!2zS2lubyB0ZWF0cm8g4oCeQXXFoXJh4oCcIHBhc3RhdGFz!5e0!3m2!1slt!2slt!4v1538855872080"
+				width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+				<h3>Maria Joe</h3>
+				<p>⛄🎸♂️</p>
+			</div>
+			<div class="col-sm-4">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6975.128533746924!2d23.901288967034684!3d54.8976792408139!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1be03ad69ec4a5d8!2sPel%C4%97d%C5%B3+kalnas%2C+A.+Simonavi%C4%8Dien%C4%97s+projektavimo+biuras!5e0!3m2!1slt!2slt!4v1538855885374"
+				width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+				<h3>Maria Joe</h3>
+				<p>⛄🎸♂️👠🍕</p>
+			</div>
+			<div class="col-sm-4">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3487.236972634398!2d23.90859571974649!3d54.90145848650218!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7193d8696ed51%3A0x50b69b213f124422!2sAdomo+Galdiko+namas!5e0!3m2!1slt!2slt!4v1538855898193"
+				width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+				<h3>Maria Joe</h3>
+				<p>♂️👠🍕</p>
+			</div>
+			<div class="col-sm-4">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1743.528747732523!2d23.90953355308677!3d54.903530823548664!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e719a380b19203%3A0xdb55786d9762907e!2s%C5%BDaliakalnio+sinagoga!5e0!3m2!1slt!2slt!4v1538855907288"
+				width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+				<h3>Maria Joe</h3>
+				<p>🎸♂️👠🍕</p>
+			</div>
+			<div class="col-sm-4">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d16125.091403356988!2d23.877333250957175!3d54.878621199795695!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722474b0b27ad%3A0xa88906b6107582c0!2sS.Dariaus+ir+S.Gir%C4%97no+aerodromas!5e0!3m2!1slt!2slt!4v1538855936644"
+				width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<h3>Maria Joe</h3>
+				<p>♂️💄🎤💃🤳⛷</p>
+			</div>
+
+			<div class="col-sm-4">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8063.001135617332!2d23.88728240849853!3d54.87634471190505!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x642e11b2ac92c4fe!2sLietuvos+aviacijos+muziejus!5e0!3m2!1slt!2slt!4v1538855949807"
+				width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<h3>Maria Joe</h3>
+				<p>🎸♂️👠🍕</p>
+			</div> 	
+			<div class="col-sm-4">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29365.664882099143!2d23.979357997054546!3d54.87192347930778!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7180070bea0a9%3A0x426b7661eac00111!2sPa%C5%BEaislio+vienuolynas+ir+ba%C5%BEny%C4%8Dia!5e0!3m2!1slt!2slt!4v1538855972906"
+				 width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<h3>Maria Joe</h3>
+				<p>🚴‍🍕</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
 
 	<footer class="cinfo">
 		<div class="container"></div>
