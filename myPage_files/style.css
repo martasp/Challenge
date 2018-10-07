@@ -22,6 +22,20 @@ p {
 	font-family:Open sans;
 }
 
+.fb-btn
+{
+	width: 50px;
+	height: 20px;
+	padding-top: 0px;
+	margin-top: 20px;
+	border: 0;
+	background: #3a589e;
+	border-radius: 3px;
+	cursor: pointer;
+	text-align: center;
+	font-family: Helvetica;
+	
+}
 /* Header */
 
 .header {

@@ -67,8 +67,10 @@
 						<div class="row">
 							<small>http://127.0.0.1:8080/myPage.html/id5555</small>
 						</div> -->
-
-						<button id="share-facebook-btn"> share</button>
+						<div class="row">
+							<div  class="fb-btn" id="share-facebook-btn"  >Share </div>
+						</div>
+						<!-- <button id="share-facebook-btn"> share</button> -->
 						<!-- <div class="row">
 							<div id="share-facebook-btn"
 							 class="fb-share-button"
@@ -210,12 +212,13 @@
 //     fjs.parentNode.insertBefore(js, fjs);
 //   }(document, 'script', 'facebook-jssdk'));
 
-
+	var globalEmojis;
 	function myFunction(val) {
 		// alert("The input value has changed. The new value is: " + val);
 		var converted = window.translateEmojiGlobal(val);
 		console.log(converted);
 		var elem = document.getElementById("emoji");
+		globalEmojis =converted;
 		elem.innerHTML = "Your challenge sentence :	" + converted;
 	}
 
@@ -224,8 +227,8 @@
 		method: 'share',
 		display: 'popup',
 		hashtag:'#EmojiChallenge',
-		quote:'Your Challenge is :',
-		href: 'https://google.com',
+		quote:'Your Challenge is :'+globalEmojis,
+		href: 'https://goo.gl/maps/UKE4LDSYGPK2',
 		}, function (response) { });
 	}
 
